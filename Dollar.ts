@@ -7,6 +7,9 @@ export class Dollar {
     return new Dollar(this.amount * multiplier);
   }
   equals(object: any): boolean {
-    return true;
+    if (object instanceof Dollar) {
+      return this.amount === object.amount;
+    }
+    return false;
   }
 }
