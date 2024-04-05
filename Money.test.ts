@@ -6,4 +6,7 @@ describe('MoneyTest', () => {
     let product = five.times(2);
     expect(product.amount).toBe(10);
   });
+  test('等号のテスト', () => {
+    expect(new Dollar(5).equals(new Dollar(5))).toBeTruthy();
+  })
 });
