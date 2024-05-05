@@ -1,15 +1,9 @@
-export class Dollar {
-  private amount: number;
+import { Money } from './Money';
+export class Dollar extends Money{
   constructor(amount: number) {
-    this.amount = amount;
+    super(amount);
   }
   times(multiplier: number): Dollar {
     return new Dollar(this.amount * multiplier);
-  }
-  equals(object: any): boolean {
-    if (object instanceof Dollar) {
-      return this.amount === object.amount;
-    }
-    return false;
   }
 }
