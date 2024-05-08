@@ -5,7 +5,8 @@ export class Money {
   }
   equals(object: any): boolean {
     if (object instanceof Money) {
-      return this.amount === object.amount;
+      const money = object as Money;
+      return this.amount === money.amount && this.constructor === money.constructor;
     }
     return false;
   }
