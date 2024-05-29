@@ -22,11 +22,13 @@ export abstract class Money {
 }
 
 class Dollar extends Money {
+  private currencyValue: string;
   constructor(amount: number) {
     super(amount);
+    this.currencyValue = "USD";
   }
   currency(): string {
-    return "USD"
+    return this.currencyValue;
   }
   times(multiplier: number): Money {
     return new Dollar(this.amount * multiplier);
@@ -34,11 +36,13 @@ class Dollar extends Money {
 }
 
 class Franc extends Money {
+  private currencyValue: string;
   constructor(amount: number) {
     super(amount);
+    this.currencyValue = "CHF";
   }
   currency(): string {
-    return "CHF"
+    return this.currencyValue;
   }
   times(multiplier: number): Money {
     return new Franc(this.amount * multiplier);
