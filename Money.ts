@@ -28,7 +28,6 @@ export abstract class Money {
 class Dollar extends Money {
   constructor(amount: number, currency: string) {
     super(amount, currency);
-    this.currencyValue = currency;
   }
   times(multiplier: number): Money {
     return Money.dollar(this.amount * multiplier);
@@ -38,7 +37,6 @@ class Dollar extends Money {
 class Franc extends Money {
   constructor(amount: number, currency: string) {
     super(amount, currency);
-    this.currencyValue = currency;
   }
   times(multiplier: number): Money {
     return Money.franc(this.amount * multiplier);
