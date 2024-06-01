@@ -30,7 +30,7 @@ class Dollar extends Money {
     super(amount, currency);
   }
   times(multiplier: number): Money {
-    return Money.dollar(this.amount * multiplier);
+    return new Dollar(this.amount * multiplier, "USD");
   }
 }
 
@@ -39,6 +39,6 @@ class Franc extends Money {
     super(amount, currency);
   }
   times(multiplier: number): Money {
-    return Money.franc(this.amount * multiplier);
+    return new Franc(this.amount * multiplier, "CHF");
   }
 }
