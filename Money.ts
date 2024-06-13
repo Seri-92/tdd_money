@@ -26,15 +26,3 @@ export class Money {
     return new Money(amount, "CHF");
   }
 }
-
-class Dollar extends Money {
-  constructor(amount: number, currency: string) {
-    super(amount, currency);
-  }
-}
-
-class Franc extends Money {
-  constructor(amount: number, currency: string) {
-    super(amount, currency);
-  }
-}
