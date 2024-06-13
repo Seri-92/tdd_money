@@ -14,16 +14,16 @@ export class Money {
   equals(object: any): boolean {
     if (object instanceof Money) {
       const money = object as Money;
-      return this.amount === money.amount && this.constructor === money.constructor;
+      return this.amount === money.amount && this.currency() === money.currency();
     }
     return false;
   }
   static dollar(amount: number): Money {
-    return new Dollar(amount, "USD");
+    return new Money(amount, "USD");
   }
 
   static franc(amount: number): Money {
-    return new Franc(amount, "CHF");
+    return new Money(amount, "CHF");
   }
 }
 
